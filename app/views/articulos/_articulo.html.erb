@@ -21,7 +21,10 @@
 
   <p>
     <strong>Marca:</strong>
-    <%= articulo.marca_id %>
+    <%#= articulo.marca_id %>
+    <% @marcas.each do |m| %>
+        <%= m.nombre if articulo.marca_id == m.id %> 
+    <% end %>
   </p>
 
 </div>

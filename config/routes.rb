@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :articulos
   resources :marcas
   root "articulos#index"

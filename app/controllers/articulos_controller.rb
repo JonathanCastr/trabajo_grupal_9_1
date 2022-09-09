@@ -1,4 +1,6 @@
 class ArticulosController < ApplicationController
+  before_action :authenticate_user!, except: :index
+  before_action :permitted?, except: [:index, :show]
   before_action :set_articulo, only: %i[ show edit update destroy ]
 
   # GET /articulos or /articulos.json
